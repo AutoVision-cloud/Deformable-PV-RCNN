@@ -46,7 +46,6 @@ Please refer to [GETTING_STARTED.md](docs/GETTING_STARTED.md) to learn more abou
 ## Results and models
 
 The results on KITTI 3D Object Detection val are shown in the table below.
-* Our models are trained with Pytorch 1.5, 8 GTX 1080Ti GPUs and are available for download.
 
 
 |                                                     | Car | Pedestrian | Cyclist  | download | 
@@ -56,9 +55,9 @@ The results on KITTI 3D Object Detection val are shown in the table below.
 | [Deformable PV-RCNN-v2](config/def_pv_rcnn.yaml) | 83.31 | 59.31 | 74.18 | [model-def-PV-RCNN-all](https://drive.google.com/file/d/1WVUsTYMFqc1yjJ-p_xo-BPixmLdI4HVg/view?usp=sharing) |
 
 **Notes:**
-
+- Our models are trained with Pytorch 1.5, 8 GTX 1080Ti GPUs and are available for download.
 - `v1` denotes using Conv3 and Conv4 features for deformations.
-- `v2` denotes using all convolutional features for deformations.
+- `v2` denotes using all convolutional features for deformations. The current configurations are set for `v2`.
 
 
 ## Citing Deformable PV-RCNN
