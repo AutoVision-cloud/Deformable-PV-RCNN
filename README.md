@@ -62,10 +62,10 @@ The 3D AP results on KITTI 3D Object Detection validation split of the moderate 
 
 The results on KITTI 3D Object Detection [test split](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) are shown in the table below.
 
-|                                                     |  FPS | Car | Pedestrian | Cyclist  | 
-|-----------------------------------------------------|:---------:|:-------:|:-------:|:-------:|
-| [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | 13 |  81.43 | 43.29 | 63.71
-| [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 12 | 81.46 | 40.89 | 68.54
+|                                                     |  FPS | Car | Pedestrian | Cyclist  | mAP
+|-----------------------------------------------------|:---------:|:-------:|:-------:|:-------:|:-------:|
+| [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | 13 |  81.43 | 43.29 | 63.71 | 62.81
+| [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 12 | 81.46 | 40.89 | 68.54 | 63.63
 
 
 
