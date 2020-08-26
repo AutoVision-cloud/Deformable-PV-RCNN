@@ -45,7 +45,7 @@ Please refer to [GETTING_STARTED.md](docs/GETTING_STARTED.md) to learn more abou
 
 ## Results and models
 
-The results on KITTI 3D Object Detection validation are shown in the table below.
+The results on KITTI 3D Object Detection validation split are shown in the table below.
 
 |                                                     | Car | Pedestrian | Cyclist  | download | 
 |-----------------------------------------------------|:-------:|:-------:|:-------:|:---------:|
@@ -60,7 +60,7 @@ The results on KITTI 3D Object Detection validation are shown in the table below
 
 
 
-The results on KITTI 3D Object Detection [test server](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) are shown in the table below.
+The results on KITTI 3D Object Detection [test split](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) are shown in the table below.
 
 |                                                     | Car | Pedestrian | Cyclist  | Inference time (ms) | 
 |-----------------------------------------------------|:-------:|:-------:|:-------:|:---------:|
