@@ -19,7 +19,7 @@ We provide code support and configuration files to reproduce the results in the 
 ## Demo
 
 <div align="center">
-  <img src="docs/demo.png" width="800px" />
+  <img src="docs/demo.png" width="700px" />
   <p>Visualizing PV-RCNN and Deformable PV-RCNN results.</p>
 </div>
 
