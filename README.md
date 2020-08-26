@@ -59,6 +59,7 @@ The results on KITTI 3D Object Detection validation are shown in the table below
 - `v2` denotes using all convolutional features for deformations. The current configurations are set for `v2`.
 
 
+
 The results on KITTI 3D Object Detection [test server](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) are shown in the table below.
 
 |                                                     | Car | Pedestrian | Cyclist  | Inference time (ms) | 
