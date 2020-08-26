@@ -27,7 +27,7 @@ We provide code support and configuration files to reproduce the results in the 
 ## Usage
 a. Clone the repo:
 ```
-git clone --recursive https://github.com/AutoVision-cloud/DeformablePVRCNN
+git clone --recursive https://github.com/AutoVision-cloud/Deformable-PV-RCNN
 ```
 b. Copy Deformable PV-RCNN src into OpenPCDet: 
 ```
