@@ -10,11 +10,12 @@ a. Clone the repo:
 ```
 git clone --recursive https://github.com/AutoVision-cloud/DeformablePVRCNN
 ```
-b. Copy Deformable PV-RCNN src into OpenPCDet. 
+b. Copy Deformable PV-RCNN src into OpenPCDet: 
 ```
 sh ./init.sh
 ```
 
-c. Install OpenPCDet and prepare KITTI data.
+c. Install OpenPCDet and prepare KITTI data:
+
 Please refer to [INSTALL.md](docs/INSTALL.md) for installation and dataset preparation.
 
