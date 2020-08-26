@@ -73,3 +73,9 @@ The results on KITTI 3D Object Detection val are shown in the table below.
     primaryClass={cs.CV}
 }
 ```
+
+
+## Acknowledgement
+* [second.pytorch](https://github.com/traveller59/second.pytorch)
+* [PointRCNN](https://github.com/sshaoshuai/PointRCNN)
+* [PV-RCNN](https://github.com/open-mmlab/OpenPCDet)
