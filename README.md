@@ -51,7 +51,7 @@ The results on KITTI 3D Object Detection val are shown in the table below.
 
 |                                                     | Car | Pedestrian | Cyclist  | download | 
 |-----------------------------------------------------|:-------:|:-------:|:-------:|:---------:|
-| [PV-RCNN](OpenPCDet/tools/cfgs/kitti_models/pv_rcnn.yaml) | 83.69 | 54.84 | 69.47 | [model-PV-RCNN](https://drive.google.com/file/d/1CXK7LVGU9jPRcygrDReQWhpwax9BJ9hb/view?usp=sharing) |
+| [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | 83.69 | 54.84 | 69.47 | [model-PV-RCNN](https://drive.google.com/file/d/1CXK7LVGU9jPRcygrDReQWhpwax9BJ9hb/view?usp=sharing) |
 | [Deformable PV-RCNN-v1](config/def_pv_rcnn.yaml) | 83.30 | 58.33 | 73.46 | [model-def-PV-RCNN](https://drive.google.com/file/d/18YpEEViDFjKdxhTFxo7mdGWdopCMZ28j/view?usp=sharing) |
 | [Deformable PV-RCNN-v2](config/def_pv_rcnn.yaml) | 83.31 | 59.31 | 74.18 | [model-def-PV-RCNN-all](https://drive.google.com/file/d/1WVUsTYMFqc1yjJ-p_xo-BPixmLdI4HVg/view?usp=sharing) |
 
