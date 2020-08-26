@@ -6,6 +6,22 @@ We provide code support and configuration files to reproduce the results in the 
 ["Deformable PV-RCNN: Improving 3D Object Detection with Learned Deformations"](https://arxiv.org/abs/2008.08766) on KITTI 3D object detection. Our code is based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet), which is a clean open-sourced project for benchmarking 3D object detection methods. 
 
 
+## Introduction
+
+**Deformable PV-RCNN**
+
+<div align="center">
+  <img src="docs/introduction.png" width="500px" />
+  <p>Learning Deformations in 3D Object Detection.</p>
+</div>
+
+
+<div align="center">
+  <img src="docs/demo.png" width="800px" />
+  <p>Visualizing PV-RCNN and Deformable PV-RCNN results.</p>
+</div>
+
+
 ## Usage
 a. Clone the repo:
 ```
@@ -28,7 +44,7 @@ Please refer to [GETTING_STARTED.md](docs/GETTING_STARTED.md) to learn more abou
 ## Results and models
 
 The results on KITTI 3D Object Detection val are shown in the table below.
-* Our models are trained with 8 GTX 1080Ti GPUs and are available for download.
+* Our models are trained with Pytorch 1.5, 8 GTX 1080Ti GPUs and are available for download.
 
 
 |                                                     | Car | Pedestrian | Cyclist  | download | 
