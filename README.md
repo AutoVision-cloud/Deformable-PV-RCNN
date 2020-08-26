@@ -45,7 +45,7 @@ Please refer to [GETTING_STARTED.md](docs/GETTING_STARTED.md) to learn more abou
 
 ## Results and models
 
-The results on KITTI 3D Object Detection validation split are shown in the table below.
+The 3D AP results on KITTI 3D Object Detection validation split of the moderate category are shown in the table below.
 
 |                                                     | Car | Pedestrian | Cyclist  | download | 
 |-----------------------------------------------------|:-------:|:-------:|:-------:|:---------:|
