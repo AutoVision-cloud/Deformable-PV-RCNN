@@ -8,7 +8,7 @@ We provide code support and configuration files to reproduce the results in the 
 
 ## Introduction
 
-**Deformable PV-RCNN**
+**Deformable PV-RCNN** is a high-performing point-cloud based 3D object detector. Currently, the proposal refinement methods used by the state-of-the-art two-stage detectors cannot adequately accommodate differing object scales, varying point-cloud density, part-deformation and clutter. We present a proposal refinement module inspired by 2D deformable convolution networks that can adaptively gather instance-specific features from locations where informative content exists. We also propose a simple context gating mechanism which allows the keypoints to select relevant context information for the refinement stage. We outperform previously published methods on the highly competetive KITTI 3D Object Detection benchmark on cars and cyclists.
 
 <div align="center">
   <img src="docs/introduction.png" width="450px" height="150px" />
