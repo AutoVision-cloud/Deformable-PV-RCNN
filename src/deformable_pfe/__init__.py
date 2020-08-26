@@ -3,7 +3,8 @@ from .def_voxel_set_abstraction import DefVoxelSetAbstraction
 
 
 __all__ = {
-    'VoxelSetAbstraction': VoxelSetAbstraction
+    'VoxelSetAbstraction': VoxelSetAbstraction, 
     'DefVoxelSetAbstraction': DefVoxelSetAbstraction
 }
+
 
