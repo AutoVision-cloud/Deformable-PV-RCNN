@@ -64,8 +64,8 @@ The results on KITTI 3D Object Detection [test split](http://www.cvlibs.net/data
 
 |                                                     |  FPS | Car | Pedestrian | Cyclist  | 
 |-----------------------------------------------------|:---------:|:-------:|:-------:|:-------:|
-| [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | 12.5 |  81.43 | 43.29 | 63.71
-| [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 11.75 | 81.46 | 40.89 | 68.54
+| [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | 13 |  81.43 | 43.29 | 63.71
+| [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 12 | 81.46 | 40.89 | 68.54
 
 
 
