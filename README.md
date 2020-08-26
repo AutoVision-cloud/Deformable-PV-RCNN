@@ -11,7 +11,7 @@ We provide code support and configuration files to reproduce the results in the 
 **Deformable PV-RCNN**
 
 <div align="center">
-  <img src="docs/introduction.png" width="500px" height="100px" />
+  <img src="docs/introduction.png" width="400px" height="150px" />
   <p>Learning Deformations in 3D Object Detection.</p>
 </div>
 
