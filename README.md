@@ -37,6 +37,11 @@ The results on KITTI 3D Object Detection val are shown in the table below.
 | [Deformable PV-RCNN-v1](config/def_pv_rcnn.yaml) | 83.30 | 58.33 | 73.46 | [model-def-PV-RCNN](https://drive.google.com/file/d/18YpEEViDFjKdxhTFxo7mdGWdopCMZ28j/view?usp=sharing) |
 | [Deformable PV-RCNN-v2](config/def_pv_rcnn.yaml) | 83.31 | 59.31 | 74.18 | [model-def-PV-RCNN-all](https://drive.google.com/file/d/1WVUsTYMFqc1yjJ-p_xo-BPixmLdI4HVg/view?usp=sharing) |
 
+**Notes:**
+
+- `v1` denotes using Conv3 and Conv4 features for deformations.
+- `v2` denotes using all convolutional features for deformations.
+
 
 ## Citing Deformable PV-RCNN
 
