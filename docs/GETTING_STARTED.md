@@ -15,7 +15,7 @@ python test.py --cfg_file ${CONFIG_FILE} --batch_size ${BATCH_SIZE} --ckpt ${CKP
 
 * For example:
 ```shell script
-python test.py --cfg_file cfgs/kitti_models/def_pv_rcnn.yaml --batch_size 4 --ckpt ../ckpt/def_pv_rcnn.pth
+python test.py --cfg_file cfgs/kitti_models/def_pv_rcnn.yaml --batch_size 4 --ckpt ${SAVED_CKPT_PATH}/def_pv_rcnn.pth
 ```
 
 
