@@ -2,9 +2,9 @@
 
 ### Requirements
 All the codes are tested in the following environment:
-* Linux (tested on Ubuntu 14.04/16.04)
+* Linux (tested on Ubuntu 16.04)
 * Python 3.6+
-* PyTorch 1.1 or higher (tested on PyTorch 1.1)
+* PyTorch 1.1 or higher (tested on PyTorch 1.5)
 * CUDA 9.0 or higher
 * `spconv v1.0` ([commit 8da6f96](https://github.com/traveller59/spconv/tree/8da6f967fb9a054d8870c3515b1b44eca2103634))
 
@@ -29,6 +29,12 @@ c. Install this `pcdet` library by running the following command:
 ```shell
 python setup.py develop
 ```
+
+d. For docker image, please refer to:
+```
+docker pull trn84/repo:latest
+```
+
 
 ## Dataset Preparation for KITTI
 * Please download the official [KITTI 3D object detection](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) dataset and organize the downloaded files as follows (the road planes could be downloaded from [[road plane]](https://drive.google.com/file/d/1d5mq0RXRnvHPVeKx6Q612z0YRO1t2wAp/view?usp=sharing), which are optional for data augmentation in the training):
