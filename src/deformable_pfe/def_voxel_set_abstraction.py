@@ -92,13 +92,23 @@ class DefVoxelSetAbstraction(nn.Module):
             for k in range(len(mlps)):
                 mlps[k] = [mlps[k][0]] + mlps[k]
 
-            cur_layer = pointnet2_stack_modules.StackSAModuleMSGAdapt(
+            if src_name in self.model_cfg.DEF_SOURCE:
+                cur_layer = pointnet2_stack_modules.StackSAModuleMSGAdapt(
                 radii=SA_cfg[src_name].POOL_RADIUS,
                 nsamples=SA_cfg[src_name].NSAMPLE,
                 mlps=mlps,
                 use_xyz=True,
                 pool_method='max_pool',
-            )
+                )
+            else:
+                cur_layer = pointnet2_stack_modules.StackSAModuleMSG(
+                radii=SA_cfg[src_name].POOL_RADIUS,
+                nsamples=SA_cfg[src_name].NSAMPLE,
+                mlps=mlps,
+                use_xyz=True,
+                pool_method='max_pool',
+                )
+
             self.SA_layers.append(cur_layer)
             self.SA_layer_names.append(src_name)
 
@@ -281,3 +291,4 @@ class DefVoxelSetAbstraction(nn.Module):
         batch_dict['point_features'] = point_features  # (BxN, C)
         batch_dict['point_coords'] = point_coords  # (BxN, 4)
         return batch_dict
+
