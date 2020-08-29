@@ -56,7 +56,8 @@ The 3D AP results on KITTI 3D Object Detection validation split of the moderate 
 **Notes:**
 - Our models are trained with Pytorch 1.5, 8 GTX 1080Ti GPUs and are available for download.
 - `v1` denotes using Conv3 and Conv4 features for deformations.
-- `v2` denotes using all convolutional features for deformations. The current configurations are set for `v2`.
+- `v2` denotes using all convolutional features for deformations. The current configurations are set for `v2`. 
+- To run inference with `v1`, remove `x_conv1` and `xconv_2` from `MODEL.PFE.DEF_SOURCE` in the config file.
 
 
 
