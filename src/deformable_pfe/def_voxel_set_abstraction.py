@@ -5,7 +5,7 @@ from ....ops.pointnet2.pointnet2_stack import pointnet2_modules as pointnet2_sta
 from ....ops.pointnet2.pointnet2_stack import pointnet2_utils as pointnet2_stack_utils
 
 
-class globalContext(nn.Module):
+class Self_Attention(nn.Module):
     """
     Capture global context for feature refinement
     """
@@ -131,7 +131,7 @@ class DefVoxelSetAbstraction(nn.Module):
 
         self.pred_bev_offset = nn.Sequential(nn.Conv1d(num_bev_features, 2, kernel_size=1, bias=False), nn.Tanh())
         self.mod_bev_offset = nn.Conv1d(num_bev_features, 1, kernel_size=1, bias=False)
-        self.global_context = globalContext(self.num_point_features)
+        self.attention = Self_Attention(self.num_point_features)
 
     def interpolate_from_bev_features(self, keypoints, bev_features, batch_size, bev_stride):
         x_idxs = (keypoints[:, :, 0] - self.point_cloud_range[0]) / self.voxel_size[0]
@@ -275,7 +275,7 @@ class DefVoxelSetAbstraction(nn.Module):
         batch_dict['point_features_before_fusion'] = point_features.view(-1, point_features.shape[-1])
         point_features = self.vsa_point_feature_fusion(point_features.view(-1, point_features.shape[-1]))
 
-        # point_features, attn = self.global_context(point_features.unsqueeze(0).permute(0, 2, 1).contiguous())  # (B, C, N)
+        # point_features, attn = self.attention(point_features.unsqueeze(0).permute(0, 2, 1).contiguous())  # (B, C, N)
         # point_features = point_features.permute(0, 2, 1).squeeze(0).contiguous()
 
         batch_dict['point_features'] = point_features  # (BxN, C)
