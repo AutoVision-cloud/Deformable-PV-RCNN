@@ -3,29 +3,31 @@ CLASS_NAMES: ['Car', 'Pedestrian', 'Cyclist']
 DATA_CONFIG:
     _BASE_CONFIG_: cfgs/dataset_configs/kitti_dataset.yaml
     DATA_AUGMENTOR:
-        - NAME: gt_sampling
-          USE_ROAD_PLANE: True
-          DB_INFO_PATH:
-              - kitti_dbinfos_train.pkl
-          PREPARE: {
-             filter_by_min_points: ['Car:5', 'Pedestrian:5', 'Cyclist:5'],
-             filter_by_difficulty: [-1],
-          }
+        DISABLE_AUG_LIST: ['placeholder']
+        AUG_CONFIG_LIST:
+            - NAME: gt_sampling
+              USE_ROAD_PLANE: True
+              DB_INFO_PATH:
+                  - kitti_dbinfos_train.pkl
+              PREPARE: {
+                 filter_by_min_points: ['Car:5', 'Pedestrian:5', 'Cyclist:5'],
+                 filter_by_difficulty: [-1],
+              }
 
-          SAMPLE_GROUPS: ['Car:20','Pedestrian:15', 'Cyclist:15']
-          NUM_POINT_FEATURES: 4
-          DATABASE_WITH_FAKELIDAR: False 
-          REMOVE_EXTRA_WIDTH: [0.0, 0.0, 0.0]
-          LIMIT_WHOLE_SCENE: False
+              SAMPLE_GROUPS: ['Car:15','Pedestrian:10', 'Cyclist:10']
+              NUM_POINT_FEATURES: 4
+              DATABASE_WITH_FAKELIDAR: False
+              REMOVE_EXTRA_WIDTH: [0.0, 0.0, 0.0]
+              LIMIT_WHOLE_SCENE: False
 
-        - NAME: random_world_flip
-          ALONG_AXIS_LIST: ['x']
+            - NAME: random_world_flip
+              ALONG_AXIS_LIST: ['x']
 
-        - NAME: random_world_rotation
-          WORLD_ROT_ANGLE: [-0.78539816, 0.78539816]
+            - NAME: random_world_rotation
+              WORLD_ROT_ANGLE: [-0.78539816, 0.78539816]
 
-        - NAME: random_world_scaling
-          WORLD_SCALE_RANGE: [0.95, 1.05]
+            - NAME: random_world_scaling
+              WORLD_SCALE_RANGE: [0.95, 1.05]
 
 MODEL:
     NAME: PVRCNN
@@ -60,25 +62,34 @@ MODEL:
 
         ANCHOR_GENERATOR_CONFIG: [
             {
+                'class_name': 'Car',
                 'anchor_sizes': [[3.9, 1.6, 1.56]],
                 'anchor_rotations': [0, 1.57],
                 'anchor_bottom_heights': [-1.78],
                 'align_center': False,
-                'feature_map_stride': 8
+                'feature_map_stride': 8,
+                'matched_threshold': 0.6,
+                'unmatched_threshold': 0.45
             },
             {
+                'class_name': 'Pedestrian',
                 'anchor_sizes': [[0.8, 0.6, 1.73]],
                 'anchor_rotations': [0, 1.57],
                 'anchor_bottom_heights': [-0.6],
                 'align_center': False,
-                'feature_map_stride': 8
+                'feature_map_stride': 8,
+                'matched_threshold': 0.5,
+                'unmatched_threshold': 0.35
             },
             {
+                'class_name': 'Cyclist',
                 'anchor_sizes': [[1.76, 0.6, 1.73]],
                 'anchor_rotations': [0, 1.57],
                 'anchor_bottom_heights': [-0.6],
                 'align_center': False,
-                'feature_map_stride': 8
+                'feature_map_stride': 8,
+                'matched_threshold': 0.5,
+                'unmatched_threshold': 0.35
             }
         ]
 
@@ -86,8 +97,6 @@ MODEL:
             NAME: AxisAlignedTargetAssigner
             POS_FRACTION: -1.0
             SAMPLE_SIZE: 512
-            MATCHED_THRESHOLDS: [0.6, 0.5, 0.5]
-            UNMATCHED_THRESHOLDS: [0.45, 0.35, 0.35]
             NORM_BY_NUM_EXAMPLES: False
             MATCH_HEIGHT: False
             BOX_CODER: ResidualCoder
@@ -220,6 +229,9 @@ MODEL:
 
 
 OPTIMIZATION:
+    BATCH_SIZE_PER_GPU: 2
+    NUM_EPOCHS: 80
+
     OPTIMIZER: adam_onecycle
     LR: 0.01
     WEIGHT_DECAY: 0.01
