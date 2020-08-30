@@ -37,7 +37,6 @@ sh ./init.sh
 c. Install OpenPCDet and prepare KITTI data:
 
 Please refer to [INSTALL.md](docs/INSTALL.md) for installation and dataset preparation.
-In case a version for OpenPCDet is already installed and incompatible with this configuration, we recommend recursively cloning the commit provided in this repository and building the library from scratch with `python setup.py develop`.
 
 d. Run experiments with a specific configuration file:
 
