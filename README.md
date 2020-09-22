@@ -13,7 +13,7 @@ We provide code support and configuration files to reproduce the results in the 
   <p>Learning Deformations in 3D Object Detection.</p>
 </div>
 
-**Deformable PV-RCNN** is a high-performing point-cloud based 3D object detector. Currently, the proposal refinement methods used by the state-of-the-art two-stage detectors cannot adequately accommodate differing object scales, varying point-cloud density, part-deformation and clutter. We present a proposal refinement module inspired by 2D deformable convolution networks that can adaptively gather instance-specific features from locations where informative content exists. We also propose a simple context gating mechanism which allows the keypoints to select relevant context information for the refinement stage. We outperform previously published methods on the highly competitive KITTI 3D Object Detection benchmark on cars and cyclists.
+**Deformable PV-RCNN** is a high-performing point-cloud based 3D object detector. Currently, the proposal refinement methods used by the state-of-the-art two-stage detectors cannot adequately accommodate differing object scales, varying point-cloud density, part-deformation and clutter. We present a proposal refinement module inspired by 2D deformable convolution networks that can adaptively gather instance-specific features from locations where informative content exists. We also propose a simple context gating mechanism which allows the keypoints to select relevant context information for the refinement stage. We outperform previously published methods on the highly competitive KITTI 3D Object Detection benchmark on cars and cyclists, and are the leading method among point-cloud based approaches on the Orientation estimation benchmark for pedestrians and cyclists.
 
 
 ## Demo
@@ -67,6 +67,13 @@ The results on KITTI 3D Object Detection [test split](http://www.cvlibs.net/data
 |-----------------------------------------------------|:---------:|:-------:|:-------:|:-------:|:-------:|
 | [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | 13 |  81.43 | **43.29** | 63.71 | 62.81
 | [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 12 | **81.46** | 40.89 | **68.54** | **63.63**
+
+The results on KITTI Orientation Estimation benchmark are shown in the table below.
+
+|                                                     |  Car | Pedestrian | Cyclist  | 3D mAOS
+|-----------------------------------------------------|:-------:|:-------:|:-------:|:-------:|
+| [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | **94.57** | 52.42 | 79.70 | 75.56
+| [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 94.52 | **54.38** | **80.05** | **76.32**
 
 
 
