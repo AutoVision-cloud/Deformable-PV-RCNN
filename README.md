@@ -70,7 +70,7 @@ The results on KITTI 3D Object Detection [test split](http://www.cvlibs.net/data
 
 The results on KITTI Orientation Estimation benchmark are shown in the table below.
 
-|                                                     |  Car | Pedestrian | Cyclist  | 3D mAOS
+|                                                     |  Car | Pedestrian | Cyclist  | mAOS
 |-----------------------------------------------------|:-------:|:-------:|:-------:|:-------:|
 | [PV-RCNN](https://github.com/open-mmlab/OpenPCDet/blob/b32fbddbe06183507bad433ed99b407cbc2175c2/tools/cfgs/kitti_models/pv_rcnn.yaml) | **94.57** | 52.42 | 79.70 | 75.56
 | [Deformable PV-RCNN](config/def_pv_rcnn.yaml) | 94.52 | **54.38** | **80.05** | **76.32**
